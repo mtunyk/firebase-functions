@@ -1,0 +1,130 @@
+{
+    "version": "1.1",
+    "identifier": "skynews_anf",
+    "title": "{{title}}",
+    "language": "en",
+    "layout": {},
+    "autoplacement": {
+        "advertisement": {
+            "enabled": true,
+            "bannerType": "any",
+            "distanceFromMedia": "10vh",
+            "frequency": 10,
+            "layout": {
+              "margin": 10
+            }
+        }
+    },
+    "documentStyle": {
+        "backgroundColor": "#F8F8F8"
+    },
+    "components": [
+        {
+            "role": "header",
+            "layout": "fullBleedLayout",
+            "behavior": {
+              "type": "parallax",
+              "factor": 0.8
+            },
+            "components": [
+              {
+                  "role": "video",
+                  "layout": "fullBleedLayout",
+                  "stillURL": "{{stillURL}}",
+                  "URL": "{{videoURL}}"
+              }
+            ]
+        },
+        {
+            "role": "caption",
+            "layout": "captionLayout",
+            "text": "{{caption}}",
+            "textStyle": "captionStyle"
+        },
+        {
+            "role": "title",
+            "layout": "titleLayout",
+            "text": "{{header}}",
+            "textStyle": "titleStyle"
+        },
+        {
+            "role": "body",
+            "layout": "dateLayout",
+            "text": "{{pubTime}}",
+            "textStyle": "dateStyle"
+        },
+        {
+            "role": "body",
+            "format": "html",
+            "text": "{{body}}",
+            "textStyle": "bodyStyle"
+        }
+    ],
+    "componentTextStyles": {
+        "titleStyle": {
+            "textAlignment": "left",
+            "fontName": "Arial-BoldMT",
+            "fontSize": 50,
+            "lineHeight": 60,
+            "textColor": "#000"
+        },
+        "bodyStyle": {
+            "textAlignment": "left",
+            "fontName": "ArialMT",
+            "fontSize": 18,
+            "lineHeight": 26,
+            "textColor": "#000",
+            "paragraphSpacingBefore": 0,
+            "paragraphSpacingAfter": 0
+        },
+        "captionStyle": {
+			"textAlignment": "left",
+			"fontName": "ArialMT",
+			"fontSize": 10,
+			"lineHeight": 10,
+			"textColor": "#707070"
+		},
+        "dateStyle": {
+			"textAlignment": "left",
+			"fontName": "ArialMT",
+			"fontSize": 13,
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"textColor": "#707070"
+		}
+    },
+
+    "componentLayouts": {
+
+      "fullBleedLayout": {
+            "ignoreDocumentMargin": true
+      },
+
+      "captionLayout": {
+            "margin": {
+                "top": 5
+            }
+      },
+
+      "titleLayout": {
+            "margin": {
+                "top": 20,
+                "bottom": 20
+            }
+      },
+      "dateLayout": {
+			"columnStart": 0,
+			"columnSpan": 7,
+			"margin": {
+				"top": 0,
+				"bottom": 20
+			}
+		}
+    },
+
+    "metadata": {
+        "thumbnailURL": "{{thumbnailURL}}",
+        "canonicalURL": "{{canonicalURL}}",
+		"excerpt": "{{excerpt}}"
+	}
+}
